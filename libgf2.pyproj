@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c8358f39-eac8-48c0-b51d-438dd09d9fc3}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="references\CRC-TR-04-03.pdf" />
+    <Content Include="doc\Makefile" />
+    <Content Include="doc\source\gf2.rst" />
+    <Content Include="doc\source\index.rst" />
+    <Content Include="doc\source\intro.rst" />
+    <Content Include="references\ffcomp.pdf" />
+    <Content Include="references\README.md" />
+    <Content Include="libgf2\fastgf2mulmod.pyx" />
+    <Content Include="libgf2\LICENSE.txt" />
+    <Content Include="README.rst" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="doc\source\conf.py" />
+    <Compile Include="libgf2\fib.py" />
+    <Compile Include="libgf2\gf2.py" />
+    <Compile Include="libgf2\lfsr.py" />
+    <Compile Include="libgf2\util.py" />
+    <Compile Include="libgf2\__init__.py" />
+    <Compile Include="libgf2\tests\test_fib.py" />
+    <Compile Include="libgf2\tests\test_gf2.py" />
+    <Compile Include="libgf2\tests\test_lfsr.py" />
+    <Compile Include="libgf2\tests\test_util.py" />
+    <Compile Include="libgf2\tests\__init__.py" />
+    <Compile Include="setup.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="doc\" />
+    <Folder Include="doc\source" />
+    <Folder Include="references\" />
+    <Folder Include="libgf2\" />
+    <Folder Include="libgf2\tests\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
